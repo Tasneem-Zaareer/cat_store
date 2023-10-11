@@ -24,6 +24,12 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
@@ -44,7 +50,14 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
               //position will be the slideAnimation
               return SlideTransition(
                 position: slidingAnimation,
-                child: const Text('All you need for your cat'),
+                child: const Text(
+                  'All you need for your cat',
+                  style: TextStyle(
+                    color: Colors.white,
+                    //fontSize: 55,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               );
             },
           ),
@@ -67,7 +80,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
   Timer timerPageNavigator() {
     return Timer(
       const Duration(seconds: 3),
-          () {
+      () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (_) => const HomeView(),

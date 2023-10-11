@@ -1,4 +1,7 @@
+import 'package:cat_shop/constants.dart';
 import 'package:cat_shop/features/splash_screen/splash_screen_view.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,9 +15,15 @@ class CatShop extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      title: 'Cat Shop',
       debugShowCheckedModeBanner: false,
-          home: SplashScreenView(),
+      theme: ThemeData.light().copyWith(
+        textTheme: GoogleFonts.rubikTextTheme()
+            .apply(bodyColor: kFontColor),
+
+      ),
+      home: const SplashScreenView(),
     );
   }
 }
