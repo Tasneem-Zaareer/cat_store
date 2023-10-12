@@ -1,11 +1,10 @@
 import 'package:cat_shop/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/button.dart';
+import '../../../core/button.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +14,9 @@ class ProductDetailsView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: kFontColor),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back_ios),
         ),
         actions: [
@@ -24,7 +25,6 @@ class ProductDetailsView extends StatelessWidget {
             color: kPrimaryColor,
           ),
           // Icon(Icons.favorite_border_rounded),
-
           //Image.asset('assets/images/heart.png',width: 20,),
           const SizedBox(width: 20),
         ],
@@ -38,10 +38,13 @@ class ProductDetailsView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //product image
-                  Center(
-                    child: Image.asset(
-                      'assets/images/2.png',
-                      height: 200,
+                  Container(
+                    height: 300,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/2.png',
+                        height: 230,
+                      ),
                     ),
                   ),
                   //product name + quantity
@@ -73,7 +76,7 @@ class ProductDetailsView extends StatelessWidget {
                               color: kPrimaryColor,
                               borderRadius: BorderRadius.circular(3),
                             ),
-                            child: Icon(Icons.add),
+                            child: const Icon(Icons.add),
                           ),
                         ],
                       ),

@@ -1,4 +1,4 @@
-import 'package:cat_shop/features/splash_screen/splash_screen_body.dart';
+import 'package:cat_shop/features/splash_screen/view/widgets/splash_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenView extends StatelessWidget {

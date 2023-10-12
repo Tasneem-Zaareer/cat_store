@@ -1,9 +1,8 @@
 import 'package:cat_shop/constants.dart';
-import 'package:cat_shop/features/home/widgets/header_home.dart';
-import 'package:cat_shop/features/home/widgets/products_grid_view.dart';
-import 'package:cat_shop/features/home/widgets/products_list_view.dart';
-import 'package:cat_shop/features/home/widgets/products_list_view_tile.dart';
-import 'package:cat_shop/features/home/widgets/tab_bar.dart';
+import 'package:cat_shop/features/home/view/widgets/header_home.dart';
+import 'package:cat_shop/features/home/view/widgets/products_grid_view.dart';
+import 'package:cat_shop/features/home/view/widgets/products_list_view.dart';
+import 'package:cat_shop/features/home/view/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -21,6 +20,7 @@ class HomeView extends StatelessWidget {
           iconTheme: IconThemeData(color: kFontColor),
           actions: const [
             Icon(Icons.notifications_rounded),
+            SizedBox(width: 20)
           ],
         ),
         body: SafeArea(
@@ -35,7 +35,7 @@ class HomeView extends StatelessWidget {
                 //tab bar
                 MyTabBar(),
                 SizedBox(height: 20),
-                //list of products
+                //best seller list view of products
                 ProductsListView(),
                 SizedBox(height: 20),
                 //grid view

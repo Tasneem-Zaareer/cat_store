@@ -1,4 +1,4 @@
-import 'package:cat_shop/features/product_details/product_details_view.dart';
+import 'package:cat_shop/features/product_details/view/product_details_view.dart';
 import 'package:flutter/material.dart';
 
 class ProductsListViewTile extends StatelessWidget {
