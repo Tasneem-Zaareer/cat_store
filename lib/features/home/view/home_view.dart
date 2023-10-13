@@ -2,8 +2,9 @@ import 'package:cat_shop/constants.dart';
 import 'package:cat_shop/features/home/view/widgets/header_home.dart';
 import 'package:cat_shop/features/home/view/widgets/products_grid_view.dart';
 import 'package:cat_shop/features/home/view/widgets/products_list_view.dart';
-import 'package:cat_shop/features/home/view/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
+
+import '../../tab_bar/tab_bar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -11,6 +12,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Colors.grey,
         //drawer
         drawer: const Drawer(),
         //app bar

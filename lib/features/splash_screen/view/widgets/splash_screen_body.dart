@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cat_shop/features/bottom_navigation_bar/view/bottom_navigation_bart.dart';
+import 'package:cat_shop/features/bottom_navigation_bar/view/bottom_navigation_bar.dart';
 import 'package:cat_shop/features/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 

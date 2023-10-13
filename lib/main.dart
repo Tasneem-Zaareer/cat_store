@@ -1,5 +1,5 @@
 import 'package:cat_shop/constants.dart';
-import 'package:cat_shop/features/bottom_navigation_bar/view/bottom_navigation_bart.dart';
+import 'package:cat_shop/features/bottom_navigation_bar/view/bottom_navigation_bar.dart';
 import 'package:cat_shop/features/splash_screen/view/splash_screen_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
