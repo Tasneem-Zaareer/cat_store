@@ -3,6 +3,8 @@ import 'package:cat_shop/features/home/view/home_view.dart';
 import 'package:cat_shop/features/wishlist/view/wishlist_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../tab_bar/tab_bar.dart';
+
 class BottomNavigationBarApp extends StatefulWidget {
   const BottomNavigationBarApp({super.key});
 
@@ -41,7 +43,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: 'Home',
+              label: 'Shop',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite),

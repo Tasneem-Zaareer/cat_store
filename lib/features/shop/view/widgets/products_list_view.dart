@@ -1,5 +1,5 @@
-import 'package:cat_shop/features/home/view/widgets/products_list_view_tile.dart';
-import 'package:cat_shop/features/home/view/widgets/section_title.dart';
+import 'package:cat_shop/features/shop/view/widgets/products_list_view_tile.dart';
+import 'package:cat_shop/features/shop/view/widgets/section_title.dart';
 import 'package:flutter/material.dart';
 
 class ProductsListView extends StatelessWidget {
