@@ -1,8 +1,10 @@
 import 'package:cat_shop/features/shop/view/all_view.dart';
+import 'package:cat_shop/features/shop/view/food_view.dart';
 import 'package:cat_shop/features/shop/view/tools_view.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../home/view/home_view.dart';
+import '../shop/view/games_view.dart';
 
 class MyTabBar extends StatelessWidget implements HomeView{
   const MyTabBar({super.key});
@@ -12,26 +14,28 @@ class MyTabBar extends StatelessWidget implements HomeView{
 
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-      //labelColor: kFontColor,
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0),
+      child: TabBar(
+        unselectedLabelColor: kFontColor,
+        isScrollable: true,
+        indicatorWeight: 10,
+        indicator: BoxDecoration(
+          color: kPrimaryColor,
+          borderRadius: BorderRadius.circular(50),
+        ),
 
-      unselectedLabelColor: kFontColor,
-      isScrollable: true,
-      indicatorWeight: 10,
-      indicator: BoxDecoration(
-        color: kPrimaryColor,
-        borderRadius: BorderRadius.circular(50),
+        tabs: const [
+          Text('All'),
+          Text('Food'),
+          Text('Tools'),
+          Text('Games'),
+          Text('Games'),
+          Text('Games'),
+          Text('Games'),
+
+        ],
       ),
-
-      tabs: const [
-        Text('All'),
-        Text('Tools'),
-        Text('Games'),
-        // Text('Food'),
-        // Text('Others'),
-        // Text('Others'),
-        // Text('Others'),
-      ],
     );
   }
 }
@@ -44,8 +48,12 @@ class TabBarViews extends StatelessWidget {
     return const TabBarView(
       children: [
         AllView(),
+        FoodView(),
         ToolsView(),
-        ToolsView(),
+        GamesView(),
+        GamesView(),
+        GamesView(),
+        GamesView(),
       ],
     );
   }

@@ -30,9 +30,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
+    return Scaffold(
         //bottom navigation bar
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedPageIndex,
@@ -57,7 +55,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
         ),
         //body will be list of bottom pages - index
         body: pages[selectedPageIndex],
-      ),
-    );
+      );
+
   }
 }

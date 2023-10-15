@@ -40,7 +40,7 @@ class Header extends StatelessWidget {
                     Text(
                       'Hi there!',
                       style: TextStyle(
-                        color: kSecondaryColor,
+                        color: kBottomTextColor,
                         fontSize: 25,
                       ),
                     ),
@@ -49,7 +49,7 @@ class Header extends StatelessWidget {
                 Text(
                   'You can choose what ever you want!',
                   style: TextStyle(
-                    color: kSecondaryColor,
+                    color: kBottomTextColor,
                   ),
                 ),
               ],

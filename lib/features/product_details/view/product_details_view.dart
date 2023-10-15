@@ -2,9 +2,13 @@ import 'package:cat_shop/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/button.dart';
+import '../../shop/model/shop_models.dart';
 
 class ProductDetailsView extends StatelessWidget {
-  const ProductDetailsView({super.key});
+  const ProductDetailsView({super.key, required this.product});
+
+  final Shop product;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +24,12 @@ class ProductDetailsView extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios),
         ),
         actions: [
-          Icon(
-            Icons.favorite,
-            color: kPrimaryColor,
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.favorite,
+              color: kPrimaryColor,
+            ),
           ),
           // Icon(Icons.favorite_border_rounded),
           //Image.asset('assets/images/heart.png',width: 20,),
@@ -38,12 +45,12 @@ class ProductDetailsView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //product image
-                  Container(
-                    height: 300,
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.35,
                     child: Center(
                       child: Image.asset(
-                        'assets/images/2.png',
-                        height: 230,
+                        product.imagePath,
+                        height: 200,
                       ),
                     ),
                   ),
@@ -73,7 +80,7 @@ class ProductDetailsView extends StatelessWidget {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: kPrimaryColor,
+                              color: kSecondaryColor,
                               borderRadius: BorderRadius.circular(3),
                             ),
                             child: const Icon(Icons.add),
@@ -108,7 +115,6 @@ class ProductDetailsView extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 15),
-
                   //price
                   const Text(
                     '\$39.80',
@@ -121,23 +127,26 @@ class ProductDetailsView extends StatelessWidget {
                   //details
                   Expanded(
                     child: ListView(
-                        children: [
-                      Text(
-                        demoText,
-                        style: const TextStyle(
-                          wordSpacing: 2,
-                          height: 2,
+                      children: [
+                        Text(
+                          demoText,
+                          style: const TextStyle(
+                            wordSpacing: 2,
+                            height: 2,
+                          ),
                         ),
-                      ),
-                    ]),
+                      ],
+                    ),
                   ),
-                  //buy now button
                 ],
               ),
             ),
             const SizedBox(height: 20),
+            //add to cart button
             const AppButton(
               text: 'Add to Cart',
+              height: 0.065,
+              fontSize: 16,
             ),
           ],
         ),

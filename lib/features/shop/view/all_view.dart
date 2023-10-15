@@ -1,3 +1,4 @@
+import 'package:cat_shop/features/shop/controller/list.dart';
 import 'package:cat_shop/features/shop/view/widgets/header_home.dart';
 import 'package:cat_shop/features/shop/view/widgets/products_grid_view.dart';
 import 'package:cat_shop/features/shop/view/widgets/products_list_view.dart';
@@ -19,16 +20,16 @@ class AllView extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: ListView(
             //crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               //header
-              Header(),
-              SizedBox(height: 20),
+              const Header(),
+              const SizedBox(height: 20),
               //best seller list view of products
-              ProductsListView(),
-              SizedBox(height: 20),
-              //grid view
-              ProductsGridView(),
-              SizedBox(height: 20),
+              ProductsListView(productsList: bestSellerList,),
+              const SizedBox(height: 20),
+              //all products grid view
+               ProductsGridView(productsList: allProductsList,),
+              const SizedBox(height: 20),
             ],
           ),
         ),
