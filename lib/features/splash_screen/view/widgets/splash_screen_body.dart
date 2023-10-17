@@ -71,9 +71,11 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
   void slidingAnimationMethode() {
     //initialize animation controller - remember to add  with SingleTickerProviderStateMixin
     animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 800));
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
     slidingAnimation = Tween<Offset>(
-      begin: const Offset(0, 5),
+      begin: const Offset(0, 3),
       end: const Offset(0, 0),
     ).animate(animationController);
     animationController.forward();
@@ -89,7 +91,6 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
         //     builder: (_) => const BottomNavigationBarApp(),
         //   ),
         // );
-
       },
     );
   }
