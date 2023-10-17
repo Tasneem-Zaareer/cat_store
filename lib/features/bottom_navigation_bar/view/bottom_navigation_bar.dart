@@ -24,7 +24,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
   //list of Widget - home, wishlist, cart
   List<Widget> pages = [
     const HomeView(),
-    const WishlistView(),
+    WishlistView(),
     const Text('cart'),
   ];
 

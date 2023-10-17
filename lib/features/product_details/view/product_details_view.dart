@@ -1,8 +1,13 @@
 import 'package:cat_shop/constants.dart';
+import 'package:cat_shop/features/product_details/view/widgets/fav_Icon_button.dart';
+import 'package:cat_shop/features/product_details/view/widgets/product_counter_quantity.dart';
+import 'package:cat_shop/features/product_details/view/widgets/product_description.dart';
+import 'package:cat_shop/features/product_details/view/widgets/product_image.dart';
+import 'package:cat_shop/features/product_details/view/widgets/review.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../../../core/button.dart';
-import '../../shop/model/shop_models.dart';
+import '../../shop/controller/shop_models.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key, required this.product});
@@ -12,27 +17,18 @@ class ProductDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //app bar
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: kFontColor),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.favorite,
-              color: kPrimaryColor,
-            ),
-          ),
-          // Icon(Icons.favorite_border_rounded),
-          //Image.asset('assets/images/heart.png',width: 20,),
+          FavIconButton(product: product),
           const SizedBox(width: 20),
         ],
       ),
@@ -44,19 +40,10 @@ class ProductDetailsView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //product image
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.35,
-                    child: Center(
-                      child: Image.asset(
-                        product.imagePath,
-                        height: 200,
-                      ),
-                    ),
-                  ),
-                  //product name + quantity
+                  ProductImage(product: product),
                   const SizedBox(height: 25),
-                  Row(
+                  //product name + quantity
+                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
@@ -65,55 +52,11 @@ class ProductDetailsView extends StatelessWidget {
                           fontSize: 20,
                         ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.grey.shade300,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: const Icon(Icons.remove),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 12.0),
-                            child: Text('0'),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: kSecondaryColor,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: const Icon(Icons.add),
-                          ),
-                        ],
-                      ),
+                      ProductCounterQuantity(),
                     ],
                   ),
                   const SizedBox(height: 10),
-                  //review
-                  const Row(
-                    children: [
-                      Icon(
-                        Icons.star_rate,
-                        color: Colors.yellow,
-                      ),
-                      Text(
-                        '4.9',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        '(430 Reviews)',
-                        style: TextStyle(
-                          color: Color(0xff8d9fa9),
-                        ),
-                      ),
-                    ],
-                  ),
+                  const Reviews(),
                   const SizedBox(height: 15),
                   //price
                   const Text(
@@ -124,20 +67,7 @@ class ProductDetailsView extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  //details
-                  Expanded(
-                    child: ListView(
-                      children: [
-                        Text(
-                          demoText,
-                          style: const TextStyle(
-                            wordSpacing: 2,
-                            height: 2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  const ProductDescription(),
                 ],
               ),
             ),
@@ -154,3 +84,5 @@ class ProductDetailsView extends StatelessWidget {
     );
   }
 }
+
+

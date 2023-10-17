@@ -1,4 +1,4 @@
-import '../model/shop_models.dart';
+import 'shop_models.dart';
 
 List bestSellerList = [
   Shop(imagePath: 'assets/images/food4.png', productName: ''),

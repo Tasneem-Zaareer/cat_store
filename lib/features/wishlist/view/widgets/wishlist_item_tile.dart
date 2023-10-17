@@ -1,10 +1,15 @@
+import 'package:cat_shop/features/wishlist/controller/wishlist_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../constants.dart';
 import '../../../../core/button.dart';
+import '../../../shop/controller/shop_models.dart';
 
 class WishlistItemTile extends StatelessWidget {
-  const WishlistItemTile({super.key});
+  const WishlistItemTile({super.key, required this.item});
+
+  final Shop item;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +35,7 @@ class WishlistItemTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
-                  'assets/images/2.png',
+                  item.imagePath,
                   height: MediaQuery.of(context).size.height * 0.12,
                 ),
                 //const SizedBox(width: 10),

@@ -1,7 +1,7 @@
 import 'package:cat_shop/features/product_details/view/product_details_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../model/shop_models.dart';
+import '../../controller/shop_models.dart';
 
 class ProductsListViewTile extends StatelessWidget {
   const ProductsListViewTile({super.key, required this.product});
@@ -28,7 +28,7 @@ class ProductsListViewTile extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color(0xfff5f1f1),
+                color: const Color(0xffeee8e8),
               ),
               width: MediaQuery.of(context).size.width * .27,
               child: Image.asset(
