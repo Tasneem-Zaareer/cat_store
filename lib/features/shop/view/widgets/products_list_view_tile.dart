@@ -18,7 +18,9 @@ class ProductsListViewTile extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return ProductDetailsView(product: product,);
+                  return ProductDetailsView(
+                    product: product,
+                  );
                 },
               ),
             );
@@ -31,8 +33,17 @@ class ProductsListViewTile extends StatelessWidget {
                 color: const Color(0xffeee8e8),
               ),
               width: MediaQuery.of(context).size.width * .27,
-              child: Image.asset(
-                product.imagePath,
+              height:  MediaQuery.of(context).size.width * .27,
+              // width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    product.imagePath,
+                    height: MediaQuery.of(context).size.height * 0.11,
+                  ),
+                  //Text('data'),
+                ],
               ),
             ),
           ),

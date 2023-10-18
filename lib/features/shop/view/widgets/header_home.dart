@@ -10,6 +10,7 @@ class Header extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        const SizedBox(height: 8),
         //intro text
         const Text(
           'Pick up\nYour items',
@@ -27,7 +28,7 @@ class Header extends StatelessWidget {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,13 +46,13 @@ class Header extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
+                    width: 50,
                     child: Text(
                       'You can choose what ever you want!',
                       style: TextStyle(
                         color: kBottomTextColor,
                       ),
                     ),
-                    width: 50,
                   ),
                   Image.asset(
                     'assets/images/0.png',

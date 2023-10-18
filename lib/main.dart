@@ -20,13 +20,10 @@ class CatShop extends StatelessWidget {
       title: 'Cat Shop',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
-        textTheme: GoogleFonts.rubikTextTheme()
-            .apply(bodyColor: kFontColor),
-
+        textTheme: GoogleFonts.rubikTextTheme().apply(bodyColor: kFontColor),
       ),
       home: const SplashScreenView(),
       // home: const BottomNavigationBarApp(),
-
     );
   }
 }

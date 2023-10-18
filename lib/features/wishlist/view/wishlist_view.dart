@@ -13,6 +13,8 @@ class WishlistView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(' wishlistController.wishList.length');
+    print(wishlistController.wishList.length);
     return Scaffold(
       body: SafeArea(
         child: Padding(

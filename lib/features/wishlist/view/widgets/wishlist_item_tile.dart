@@ -60,7 +60,7 @@ class WishlistItemTile extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(
                         Icons.favorite,
-                        color: kPrimaryColor,
+                        color: kWishlistIcon,
                         size: 20,
                       ),
                     ),

@@ -24,7 +24,7 @@ class FavIconButton extends StatelessWidget {
           icon: wishlistController.isItemInWishlist
             ? Icon(
                 Icons.favorite,
-                color: kPrimaryColor,
+                color: kWishlistIcon,
               )
             : Icon(
                 Icons.favorite_border_rounded,

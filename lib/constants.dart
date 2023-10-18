@@ -9,7 +9,7 @@ Color kFontColor = const Color(0xff646569);
 
 Color kBottomTextColor = const Color(0xffffffff);
 Color kBottomColor = const Color(0xff93cce0);
-Color kWishlistIcon = const Color(0xff93cce0);
+Color kWishlistIcon = const Color(0xffff79c7);
 
 
 

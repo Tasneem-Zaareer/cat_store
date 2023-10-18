@@ -4,7 +4,7 @@ import 'package:cat_shop/features/shop/view/widgets/products_grid_view.dart';
 import 'package:cat_shop/features/shop/view/widgets/products_list_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../tab_bar/tab_bar.dart';
+import '../../tab_bar/view/tab_bar.dart';
 
 class AllView extends StatelessWidget implements PreferredSizeWidget {
   const AllView({super.key});

@@ -1,12 +1,13 @@
 import 'package:cat_shop/features/shop/view/all_view.dart';
 import 'package:cat_shop/features/shop/view/food_view.dart';
 import 'package:cat_shop/features/shop/view/tools_view.dart';
+import 'package:cat_shop/features/tab_bar/view/widgets/tab_style.dart';
 import 'package:flutter/material.dart';
-import '../../constants.dart';
-import '../home/view/home_view.dart';
-import '../shop/view/games_view.dart';
+import '../../../constants.dart';
+import '../../home/view/home_view.dart';
+import '../../shop/view/games_view.dart';
 
-class MyTabBar extends StatelessWidget implements HomeView{
+class MyTabBar extends StatelessWidget implements HomeView {
   const MyTabBar({super.key});
 
   @override
@@ -14,27 +15,26 @@ class MyTabBar extends StatelessWidget implements HomeView{
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> tabsList = [
+      TabStyle(text: 'All'),
+      TabStyle(text: 'Food'),
+      TabStyle(text: 'Tools'),
+      TabStyle(text: 'Games'),
+    ];
+
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0),
+      padding: const EdgeInsets.only(left: 20.0,right: 20,),
       child: TabBar(
-        unselectedLabelColor: kFontColor,
-        isScrollable: true,
-        indicatorWeight: 10,
+        unselectedLabelColor: Colors.grey[500],
+        labelColor: Colors.white,
+        indicatorColor: kPrimaryColor,
+        // isScrollable: true,
+        //indicatorWeight: 10,
         indicator: BoxDecoration(
           color: kPrimaryColor,
           borderRadius: BorderRadius.circular(50),
         ),
-
-        tabs: const [
-          Text('All'),
-          Text('Food'),
-          Text('Tools'),
-          Text('Games'),
-          Text('Games'),
-          Text('Games'),
-          Text('Games'),
-
-        ],
+        tabs: tabsList,
       ),
     );
   }
@@ -51,10 +51,16 @@ class TabBarViews extends StatelessWidget {
         FoodView(),
         ToolsView(),
         GamesView(),
-        GamesView(),
-        GamesView(),
-        GamesView(),
+
       ],
     );
   }
 }
+// List<Widget> tabsList = [
+//   TabStyle(text: 'All'),
+//   TabStyle(text: 'Food'),
+//   TabStyle(text: 'Tools'),
+//   TabStyle(text: 'Games'),
+//
+// ];
+

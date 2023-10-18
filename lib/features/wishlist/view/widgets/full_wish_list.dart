@@ -6,8 +6,10 @@ import 'package:get/get.dart';
 import '../../../shop/controller/shop_models.dart';
 
 class FullWishList extends StatelessWidget {
-   FullWishList({super.key});
+  FullWishList({super.key});
+
   final WishlistController wishlistController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,26 +22,30 @@ class FullWishList extends StatelessWidget {
         ),
         const SizedBox(height: 15),
         Expanded(
-          child:
-          GetBuilder<WishlistController>(
-              builder: (wishlistController) {
-                return   ListView.builder(
-                  itemCount: wishlistController.wishList.length,
-                  itemBuilder: (context, index) {
-                    final Shop product =
-                    wishlistController.wishList[index];
-                    WishlistItemTile(
-                    item: product);
-                  }
-                );
-
-
-              }
+          child: GetBuilder<WishlistController>(
+            builder: (wishlistController) {
+              return ListView.builder(
+                itemCount: wishlistController.wishList.length,
+                itemBuilder: (context, index) {
+                  final Shop product = wishlistController.wishList[index];
+                  return WishlistItemTile(item: product);
+                },
+              );
+            },
           ),
-
-
         ),
       ],
     );
   }
 }
+
+// ListView.builder(
+// itemCount: 4,
+// itemBuilder: (context, index) {
+// final Shop product = Shop(
+// imagePath: 'assets/images/food2.png',
+// productName: '',
+// );
+// return WishlistItemTile(item: product);
+// },
+// ),

@@ -3,7 +3,7 @@ import 'package:cat_shop/features/home/view/home_view.dart';
 import 'package:cat_shop/features/wishlist/view/wishlist_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../tab_bar/tab_bar.dart';
+import '../../tab_bar/view/tab_bar.dart';
 
 class BottomNavigationBarApp extends StatefulWidget {
   const BottomNavigationBarApp({super.key});
