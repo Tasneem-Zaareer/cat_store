@@ -11,7 +11,8 @@ class ProductsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return
+      SizedBox(
       height: MediaQuery.of(context).size.height * .18,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +22,7 @@ class ProductsListView extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               //itemExtent: 100,
-              itemCount: bestSellerList.length,
+              itemCount: allProductsList.length,
               itemBuilder: (context, index) => ProductsListViewTile(
                 product: productsList[index],
               ),

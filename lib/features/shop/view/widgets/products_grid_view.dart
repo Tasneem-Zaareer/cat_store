@@ -20,7 +20,7 @@ class ProductsGridView extends StatelessWidget {
           physics: const ScrollPhysics(),
           //scrollDirection: Axis.vertical,
           children: List.generate(
-            6,
+           productsList.length,
             (index) => ProductsListViewTile(
               product: productsList[index],
             ),

@@ -16,12 +16,12 @@ class FavIconButton extends StatelessWidget {
       //init: WishlistController(),
       builder: (wishlistController) => IconButton(
         onPressed: () {
-          //wishlistController.changeWishlist();
-          wishlistController.isItemInWishlist
-              ? wishlistController.removeFromWishlist(product)
-              : wishlistController.addToWishlist(product);
+          product.inWishlist
+              ? wishlistController.removeFromWishlist(product,false)
+              : wishlistController.addToWishlist(product, true);
+
         },
-          icon: wishlistController.isItemInWishlist
+        icon: product.inWishlist
             ? Icon(
                 Icons.favorite,
                 color: kWishlistIcon,
@@ -30,7 +30,6 @@ class FavIconButton extends StatelessWidget {
                 Icons.favorite_border_rounded,
                 color: kFontColor,
               ),
-
       ),
     );
   }

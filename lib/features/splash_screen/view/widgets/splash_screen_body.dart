@@ -84,7 +84,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     return Timer(
       const Duration(seconds: 3),
       () {
-        Get.to(const BottomNavigationBarApp());
+        Get.to(()=>const BottomNavigationBarApp());
         // Navigator.of(context).pushReplacement(
         //   MaterialPageRoute(
         //     builder: (_) => const BottomNavigationBarApp(),

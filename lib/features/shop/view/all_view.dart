@@ -5,6 +5,7 @@ import 'package:cat_shop/features/shop/view/widgets/products_list_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../tab_bar/view/tab_bar.dart';
+import '../controller/shop_models.dart';
 
 class AllView extends StatelessWidget implements PreferredSizeWidget {
   const AllView({super.key});
@@ -14,26 +15,25 @@ class AllView extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-     SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: ListView(
-            //crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //header
-              const Header(),
-              const SizedBox(height: 20),
-              //best seller list view of products
-              ProductsListView(productsList: bestSellerList,),
-              const SizedBox(height: 20),
-              //all products grid view
-               ProductsGridView(productsList: allProductsList,),
-              const SizedBox(height: 20),
-            ],
-          ),
+    //List<Shop> bestSellerProductsList = List<Shop>.from(allProductsList);
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: ListView(
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //header
+            const Header(),
+            const SizedBox(height: 20),
+            //best seller list view of products
+            ProductsListView(productsList: bestSellerList),
+            const SizedBox(height: 20),
+            //all products grid view
+            ProductsGridView(productsList: allProductsList),
+            const SizedBox(height: 20),
+          ],
         ),
-      );
-
+      ),
+    );
   }
 }
