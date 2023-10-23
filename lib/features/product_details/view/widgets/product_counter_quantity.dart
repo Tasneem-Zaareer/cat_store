@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../constants.dart';
-import '../../controller/add_to_cart_controller.dart';
+import '../../../cart/controller/cart_controller.dart';
 import 'package:get/get.dart';
 
 class ProductCounterQuantity extends StatelessWidget {

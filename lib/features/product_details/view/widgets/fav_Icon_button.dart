@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../constants.dart';
-import '../../../shop/controller/shop_models.dart';
+import '../../../shop/model/shop_models.dart';
 import '../../../wishlist/controller/wishlist_controller.dart';
 import 'package:get/get.dart';
 

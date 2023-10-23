@@ -1,8 +1,7 @@
 import 'package:cat_shop/constants.dart';
-import 'package:cat_shop/features/shop/controller/list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../shop/controller/shop_models.dart';
+import '../../shop/model/shop_models.dart';
 
 class WishlistController extends GetxController {
   bool isItemInWishlist = false;

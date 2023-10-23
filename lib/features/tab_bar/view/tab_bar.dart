@@ -4,7 +4,7 @@ import 'package:cat_shop/features/shop/view/tools_view.dart';
 import 'package:cat_shop/features/tab_bar/view/widgets/tab_style.dart';
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
-import '../../home/view/home_view.dart';
+import '../../shop/view/home_view.dart';
 import '../../shop/view/games_view.dart';
 
 class MyTabBar extends StatelessWidget implements HomeView {

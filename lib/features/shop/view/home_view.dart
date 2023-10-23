@@ -1,6 +1,5 @@
 import 'package:cat_shop/constants.dart';
 import 'package:flutter/material.dart';
-import '../../bottom_navigation_bar/view/bottom_navigation_bar.dart';
 import '../../tab_bar/view/tab_bar.dart';
 import '../../tab_bar/view/widgets/tab_style.dart';
 
@@ -13,11 +12,10 @@ class HomeView extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> tabsList = [
-      TabStyle(text: 'All'),
-      TabStyle(text: 'Food'),
-      TabStyle(text: 'Tools'),
-      TabStyle(text: 'Games'),
-
+      const TabStyle(text: 'All'),
+      const TabStyle(text: 'Food'),
+      const TabStyle(text: 'Tools'),
+      const TabStyle(text: 'Games'),
     ];
     return DefaultTabController(
       length: tabsList.length,
@@ -32,7 +30,7 @@ class HomeView extends StatelessWidget implements PreferredSizeWidget {
             Icon(Icons.notifications_rounded),
             SizedBox(width: 20),
           ],
-          bottom: MyTabBar(),
+          bottom: const MyTabBar(),
         ),
         body: const TabBarViews(),
       ),

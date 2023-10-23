@@ -1,5 +1,5 @@
 import 'package:cat_shop/constants.dart';
-import 'package:cat_shop/features/home/view/home_view.dart';
+import 'package:cat_shop/features/shop/view/home_view.dart';
 import 'package:cat_shop/features/wishlist/view/wishlist_view.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shop/controller/shop_models.dart';
+import '../../../shop/model/shop_models.dart';
 
 class ProductImage extends StatelessWidget {
   const ProductImage({super.key, required this.product});

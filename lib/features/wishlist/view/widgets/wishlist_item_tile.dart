@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../../constants.dart';
 import '../../../../core/button.dart';
-import '../../../shop/controller/shop_models.dart';
+import '../../../shop/model/shop_models.dart';
 
 class WishlistItemTile extends StatelessWidget {
   const WishlistItemTile({super.key, required this.item});

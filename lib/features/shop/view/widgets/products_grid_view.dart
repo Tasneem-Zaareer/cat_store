@@ -1,4 +1,3 @@
-import 'package:cat_shop/features/shop/controller/list.dart';
 import 'package:cat_shop/features/shop/view/widgets/products_list_view_tile.dart';
 import 'package:cat_shop/features/shop/view/widgets/section_title.dart';
 import 'package:flutter/material.dart';

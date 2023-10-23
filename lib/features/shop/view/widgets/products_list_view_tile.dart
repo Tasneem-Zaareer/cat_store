@@ -1,7 +1,7 @@
 import 'package:cat_shop/features/product_details/view/product_details_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../controller/shop_models.dart';
+import '../../model/shop_models.dart';
 
 class ProductsListViewTile extends StatelessWidget {
   const ProductsListViewTile({super.key, required this.product});

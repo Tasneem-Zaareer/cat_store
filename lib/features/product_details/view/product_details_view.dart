@@ -7,7 +7,7 @@ import 'package:cat_shop/features/product_details/view/widgets/review.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../core/button.dart';
-import '../../shop/controller/shop_models.dart';
+import '../../shop/model/shop_models.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key, required this.product});
